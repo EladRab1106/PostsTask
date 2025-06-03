@@ -1,20 +1,15 @@
-import { useEffect, useState } from "react";
+import { Routes,Route} from "react-router-dom";
+import PostList from "./components/PostList";
+import NewPostForm from "./components/NewPostForm";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch("http://localhost:3001/")
-      .then((res) => res.text())
-      .then((data) => setMessage(data))
-      .catch((err) => console.error(err));
-  }, []);
+  
 
   return (
-    <div>
-      <h1>Front + Back Connected</h1>
-      <p>Response from server: {message}</p>
-    </div>
+    <Routes>
+      <Route path = "/" element = {<PostList/>}/>
+      <Route path = "/createPost" element = {<NewPostForm/>}/>
+    </Routes>
   );
 }
 

@@ -1,12 +1,13 @@
 {
   "name": "my-fullstack-app",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-   "client": "npm run dev --prefix client",
-  "server": "npm run dev --prefix server",
-  "dev": "npm-run-all --parallel client server"
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "dev": "npm-run-all --parallel client server"
   },
   "repository": {
     "type": "git",
